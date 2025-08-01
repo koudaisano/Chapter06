@@ -1,12 +1,12 @@
-import React from 'react';
 import { post } from '../data/post';
+import styles from './Post.module.css';
 
 const Post = () => {
     return (
-  <ul>
+  <ul className={styles.container}>
     {post.map((post) => (
-      <li key={post.id}>
-        <p>{post.title}</p>
+      <li key={post.id} className={styles.li}>
+        <h2>{post.title}</h2>
         <img src={post.thumbnailUrl} alt={post.title} />
         <p>{post.content}</p>
       </li>
